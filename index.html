@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 20px;
+      padding: 20px 40px;
+    }
+
+    /* Blog posts */
+    .blog-post {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+    .blog-post:hover {
+      transform: translateY(-5px);
+    }
+    .blog-post img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .blog-content {
+      padding: 20px;
+    }
+    .blog-content h2 {
+      margin-bottom: 5px;
+    }
+    .meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+    .tags span {
+      display: inline-block;
+      background: #ff9800;
+      color: #fff;
+      padding: 4px 10px;
+      margin-right: 5px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .blog-content p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .read-more {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #ff9800;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .read-more:hover {
+      background: #e68900;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      height: fit-content;
+    }
+    .sidebar h3 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff9800;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+    }
+    .sidebar ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Layout -->
+  <div class="container">
+
+    <!-- Blog Section -->
+    <main>
+      <article class="blog-post">
+        <img src="https://source.unsplash.com/800x400/?nature" alt="Blog 1">
+        <div class="blog-content">
+          <h2>Exploring the Beauty of Nature</h2>
+          <div class="meta">By John Doe | June 12, 2025</div>
+          <div class="tags"><span>Nature</span><span>Travel</span></div>
+          <p>Nature has always been a source of inspiration and peace. From towering mountains to serene beaches, exploring the outdoors connects us to the world in meaningful ways. In this post, we’ll dive into some of the most breathtaking destinations for nature lovers.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="blog-post">
+        <img src="https://source.unsplash.com/800x400/?technology" alt="Blog 2">
+        <div class="blog-content">
+          <h2>Top Tech Trends in 2025</h2>
+          <div class="meta">By Sarah Lee | August 1, 2025</div>
+          <div class="tags"><span>Technology</span><span>Innovation</span></div>
+          <p>Technology is evolving faster than ever. Artificial Intelligence, blockchain, and quantum computing are reshaping industries. Let’s look at some of the most promising tech trends to watch out for this year.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="blog-post">
+        <img src="https://source.unsplash.com/800x400/?travel" alt="Blog 3">
+        <div class="blog-content">
+          <h2>10 Best Travel Spots for 2025</h2>
+          <div class="meta">By Alex Carter | July 20, 2025</div>
+          <div class="tags"><span>Travel</span><span>Lifestyle</span></div>
+          <p>Travel is one of the most enriching experiences of life. From hidden gems to popular tourist destinations, here are the top 10 places you should consider visiting in 2025.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">🌿 Lifestyle</a></li>
+        <li><a href="#">💻 Technology</a></li>
+        <li><a href="#">✈️ Travel</a></li>
+        <li><a href="#">📚 Education</a></li>
+      </ul>
+
+      <h3 style="margin-top:20px;">Recent Posts</h3>
+      <ul>
+        <li><a href="#">Exploring the Beauty of Nature</a></li>
+        <li><a href="#">Top Tech Trends in 2025</a></li>
+        <li><a href="#">10 Best Travel Spots for 2025</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Blog. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript (optional for interactive effects) -->
+  <script>
+    // Example: Show alert on clicking "Read More"
+    document.querySelectorAll(".read-more").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        alert("This will take you to the full article!");
+      });
+    });
+  </script>
+
+</body>
+</html>
